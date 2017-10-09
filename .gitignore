@@ -1,0 +1,3 @@
+node_modules/
+routes/**
+!routes/index/index.html
