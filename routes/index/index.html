@@ -1,0 +1,23 @@
+<h1>Index</h1>
+<ul></ul>
+<script>
+function GET(url) {
+  return new Promise(res => {
+    let xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = () => {
+      if(xmlHttp.readyState == 4 && xmlHttp.status == 200) res(xmlHttp.responseText)
+    }
+    xmlHttp.open('GET', url, true);// true for asynchronous 
+    xmlHttp.send();
+  })
+}
+
+GET('/routes').then(res => {
+  const routes = JSON.parse(res);
+  routes.forEach(r => {
+    const el = document.createElement('li')
+    el.innerHTML = `<a href="/${r}">${r}</a>`;
+    document.querySelector('ul').appendChild(el);
+  })
+})
+</script>
