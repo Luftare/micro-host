@@ -1,7 +1,7 @@
 {
-  "name": "dropbox",
+  "name": "micro-host",
   "version": "1.0.0",
-  "description": "box",
+  "description": "Host html files with dynamic routing based on folder structure",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,6 @@
   "author": "LF",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.18.2",
     "express": "^4.16.1"
   }
 }
